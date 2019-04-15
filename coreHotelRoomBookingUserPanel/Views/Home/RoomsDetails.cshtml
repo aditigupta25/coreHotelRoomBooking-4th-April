@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "RoomsDetails";
+    Layout = "~/Views/Shared/_Details.cshtml";
+}
+
+
+<div class="details">
+    <div class="container">
+        <div class="row">
+
+
+            <!-- Details Image -->
+            <div class="col-xl-7 col-lg-6">
+                <div class="details_image">
+                    <div class="background_image">
+                        <div class="details_title">
+                            @ViewBag.HotelRoom.RoomType
+                        </div>
+                        <br />
+                        <br />
+                        <img src="@ViewBag.HotelRoom.RoomImage" class="bd-placeholder-img card-img-top" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Content -->
+            <div class="col-xl-5 col-lg-6">
+   
+     
+                 <div class="details_long_list">
+                        <div class="card-body">
+                         <br/>
+                            <br/>
+                            <table class="table table-hover table table-bordered">
+                                <tr>
+                                    <th>
+                                        Hotel Name
+                                    </th>
+                                    <td>
+                                        @ViewBag.Hotel.HotelName
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Room Price
+                                    </th>
+                                    <td>
+                                        @ViewBag.HotelRoom.RoomPrice
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Room Description
+                                    </th>
+                                    <td>
+                                        @ViewBag.HotelRoom.RoomDescription
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Is Available
+                                    </th>
+                                    <td>
+                                        @ViewBag.RoomFacilities.IsAvilable.ToString()
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        WiFi
+                                    </th>
+                                    <td>
+                                        @ViewBag.RoomFacilities.Wifi.ToString()
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        E Kettle
+                                    </th>
+                                    <td>
+                                        @ViewBag.RoomFacilities.Ekettle.ToString()
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Refrigerator
+                                    </th>
+                                    <td>
+                                        @ViewBag.RoomFacilities.Refrigerator.ToString()
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Room Facility Description
+                                    </th>
+                                    <td>
+                                        @ViewBag.RoomFacilities.RoomFacilityDescription
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="book_now_button" style="margin-left:20px"><a asp-controller="Booking" asp-action="Buy" asp-route-id="@ViewBag.HotelRoom.RoomId" onclick="cartAleart();">Add To Cart</a></div>
+                    <div class="book_now_button" style="margin-top:-52px; margin-left:190px"><a asp-controller="Home" asp-action="HotelRoomsIndex" asp-route-id="@ViewBag.Hotel.HotelId" >Back to Home</a></div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

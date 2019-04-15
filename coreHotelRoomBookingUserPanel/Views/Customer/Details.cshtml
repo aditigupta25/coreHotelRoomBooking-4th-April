@@ -1,0 +1,118 @@
+﻿@model coreHotelRoomBookingUserPanel.Models.Customers
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Basic.cshtml";
+}
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="background_image"><img src="~/images/booking.jpg" /></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content text-center">
+                                <div class="home_title">Here's Your Profile</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking">
+
+        </div>
+
+        <div class="container">
+            <center><h3>View Your Profile</h3></center>
+            <br/>
+            <table class="table table-hover table table-bordered">
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CustomerFirstName)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Last Name
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CustomerLastName)
+                    </td>
+                </tr>
+                <tr>
+
+                    <th>
+                        Customer Address
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CustomerAddress)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Contact Number
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CustomerContactNumber)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Email Id
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CustomerEmailId)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        State
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.State)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Hotel Country
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.Country)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Zip
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.Zip)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Password
+                    </th>
+                    <td>
+                        @Html.DisplayFor(model => model.CustomerPassword)
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <br />
+            <br />
+            <div class="book_button" style="margin-left:190px">
+                <a asp-action="Edit" asp-controller="Customer">Update Profile</a>
+            </div>
+           
+        </div>
+
+       

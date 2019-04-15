@@ -1,0 +1,91 @@
+﻿@model coreHotelRoomBookingUserPanel.Models.Customers
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Basic.cshtml";
+}
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="background_image"><img src="~/images/booking.jpg" /></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content text-center">
+                                <div class="home_title">Here's Your Profile</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking">
+
+        </div>
+
+        <div class="container">
+            <center><h3>Update Your Profile</h3></center>
+            <br />
+            <form asp-action="Edit" asp-controller="Customer" method="post">
+                <div class="form-group">
+                    <label for="CustomerFirstName">Customer First Name</label>
+                    <input type="text" asp-for="CustomerFirstName" class="form-control" placeholder="Customer First Name" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="CustomerLastName">Customer Last Name</label>
+                    <input type="text" asp-for="CustomerLastName" class="form-control" placeholder="Customer Last Name" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="CustomerAddress">Customer Address</label>
+                    <input type="text" asp-for="CustomerAddress" class="form-control" placeholder="Customer Address" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="CustomerContactNumber">Customer Contact Number</label>
+                    <input type="text" asp-for="CustomerContactNumber" class="form-control" placeholder="Customer Contact Number" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="CustomerEmailId">Customer Email Id</label>
+                    <input type="text" asp-for="CustomerEmailId" class="form-control" placeholder="Customer Email Id" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="Country">Country</label>
+                    <input type="text" asp-for="Country" class="form-control" placeholder="Country" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="State">State</label>
+                    <input type="text" asp-for="State" class="form-control" placeholder="State" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="Zip">Zip</label>
+                    <input type="text" asp-for="Zip" class="form-control" placeholder="Zip" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="CustomerPassword">Customer Password</label>
+                    <input type="text" asp-for="CustomerPassword" class="form-control" placeholder="Customer Password" required autofocus>
+                </div>
+                <div class="form-group">
+
+                    <button class="book_button a" style="margin-left:0px; border:hidden; color:white;" type="submit">Edit</button>
+                    <div class="book_button" style="margin-left:165px; margin-top:-55px">
+                        <a asp-action="Details" asp-controller="Customer">Back to Profile</a>
+                    </div>
+                    <br />
+                    <br />
+                </div>
+            </form>
+
+        </div>
+
+       

@@ -1,0 +1,100 @@
+﻿
+@model coreHotelRoomBookingUserPanel.Models.Feeds
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "Feedback";
+    Layout = "~/Views/Shared/_Basic.cshtml";
+}
+
+
+<div class="home">
+    <div class="background_image"><img src="~/images/booking.jpg" /></div>
+    <div class="home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="home_content text-center">
+                        <div class="home_title">Your Booking History</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+
+
+<div class="container">
+    <center><div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+    </div></center>
+    <form method="post" asp-action="Feedback" asp-controller="Customer">
+        <center><h3> Feedback Form</h3></center>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class=" text-large" for="HotelId">Hotel Id</label>
+                    <select asp-for="HotelId" asp-items="ViewBag.hotel" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label class=" text-large" for="Appearance">Appearance</label>
+                    <input class="form-control" type="text" name="Appearance" placeholder="Excellent / Good / Poor" />
+                    @*<label class="radio-inline rd">
+                            <input type="radio" name="optradio" value="Excellent" checked>Excellent
+                        </label>
+                        <label class="radio-inline rd">
+                            <input type="radio" name="optradio" value="Good">Good
+                        </label>
+                        <label class="radio-inline rd">
+                            <input type="radio" name="optradio" value="Poor">Poor
+                        </label>*@
+                </div>
+
+                <div class="form-group">
+                    <label class=" text-large" for="Expectation">Expectation</label>
+                    <input class="form-control" type="text" name="Expectation" placeholder="Excellent / Good / Poor" />
+                    @*<label class="radio-inline rd">
+                            <input type="radio" name="optradio1" value="Excellent" checked>Excellent
+                        </label>
+                        <label class="radio-inline rd">
+                            <input type="radio" name="optradio1" value="Good">Good
+                        </label>
+                        <label class="radio-inline rd">
+                            <input type="radio" name="optradio1" value="Poor">Poor
+                        </label>*@
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label class=" text-large" for="ImproveServices">Area of Imporvement</label>
+                    <textarea name="ImproveServices" class="form-control" placeholder="Area of Imporvement *" style="width: 100%; height: 150px;"></textarea>
+                    <br />
+                    <label class=" text-large" for="Comments">Comment</label>
+                    <textarea name="Comments" class="form-control" placeholder="Comment *" style="width: 100%; height: 150px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="CustomerId" value="@Context.Session.GetString("cID")" hidden />
+                    <button type="submit" name="btnSubmit" value="Send Message" class="book_button" style="margin-left:0px; border:hidden; color:white;">Send Feedback</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </form>
+</div>

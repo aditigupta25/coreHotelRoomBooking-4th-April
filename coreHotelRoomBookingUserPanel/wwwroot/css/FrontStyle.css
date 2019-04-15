@@ -1,0 +1,30 @@
+﻿.jumbotron {
+    height:550px;
+    color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/photos/md/2017-11-06/a_calm_hotel_room.jpg);
+}
+
+
+.album {
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/videoblocks-grey-tech-abstract-minimal-geometric-pattern-motion-design-seamless-loop-video-animation-ultra-hd-4k-3840x2160_rzcujfpqf_thumbnail-full01.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section_jumbo {
+    align-items:center;
+}
+
+.header-style {
+    font-family:'Lucida Calligraphy';
+    font-size:50px;
+}
+
+.header-style2 {
+    font-family: Calibri;
+    font-size: 20px;
+}

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<coreHotelRoomBookingUserPanel.Models.HotelRooms>
+@{@using Microsoft.AspNetCore.Http;
+ViewData["Title"] = "HotelRoomsIndex";
+Layout = "~/Views/Shared/_BookRoomView.cshtml";
+}
+
+
+
+<!-- Details Right -->
+
+<div class="details">
+    <div class="container">
+        <div class="row">
+
+            @foreach (var item in ViewBag.HotelRoomIndex)
+            {
+                <!-- Details Image -->
+                <div class="col-xl-7 col-lg-6">
+                    <div class="details_image">
+                        <div class="background_image"><img src="@item.RoomImage" class="bd-placeholder-img card-img-top" /></div>
+                    </div>
+                </div>
+
+                <!-- Details Content -->
+                <div class="col-xl-5 col-lg-6">
+                    <div class="details_content">
+                        <div class="details_title">@item.RoomType</div>
+
+                        <div class="details_long_list">
+                            <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+                                <li>Balcony</li>
+                                <li>Mountain view</li>
+                                <li>Terrace</li>
+                                <li>TV</li>
+                                <li>Satellite Channels</li>
+                                <li>Safety Deposit Box</li>
+                                <li>Heating</li>
+                                <li>Sofa</li>
+                                <li>Tile/Marble floor</li>
+                                <li>Mosquito net</li>
+                                <li>Wardrobe/Closet</li>
+                                <li>Sofa bed</li>
+                                <li>Shower</li>
+                                <li>Hairdryer</li>
+                                <li>Free toiletries</li>
+                                <li>Toilet</li>
+                                <li>Bath or Shower</li>
+                                <li>Toilet paper</li>
+                                <li>Tea/Coffee Maker</li>
+                                <li>Minibar</li>
+                                <li>Dining area</li>
+                                <li>Electric kettle</li>
+                                <li>Dining table</li>
+                                <li>Outdoor furniture</li>
+                                <li>Outdoor dining area</li>
+                                <li>Towels</li>
+                                <li>Linen</li>
+                                <li>Upper floors accessible by lift</li>
+                            </ul>
+                        </div>
+                        <div class="book_now_button"><a asp-controller="Booking" asp-action="Buy" asp-route-id="@item.RoomId" onclick="cartAlert()">Book Now</a></div>
+                        <div class="book_now_button" style="margin-top:-55px; margin-left:170px"><a asp-controller="Home" asp-action="RoomsDetails" asp-route-id="@item.RoomId">View Details</a></div>
+                        <br />
+                        <br />
+                        <br/>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+     
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

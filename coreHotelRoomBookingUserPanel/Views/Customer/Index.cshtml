@@ -1,0 +1,115 @@
+﻿
+@model coreHotelRoomBookingUserPanel.Models.Customers
+
+@{
+    Layout = "~/Views/Shared/_LoginView.cshtml";
+}
+
+    <div class="limiter">
+        <div class="container-login100" style="background: url('https://thewallpaper.co/wp-content/uploads/2016/03/restaurant_table-interior-modern-style-wide-hd-wallpaper-download-restaurant-pictures-windows-wallpaper-hd-free-images-amazing-1920x1080.jpg');">
+            <div class="wrap-login100 p-t-30 p-b-50">
+                <span class="login100-form-title p-b-41">
+                    Account Login
+                </span>
+                <form class="login100-form validate-form p-b-33 p-t-5" method="post" asp-controller="Customer" asp-action="MyLogin">
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                        <input class="input100" type="text" name="username" placeholder="Customer Name" />
+                        <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input class="input100" type="password" name="password" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn m-t-32">
+                        <button class="login100-form-btn" type="submit">
+                            Login
+                        </button>
+                    </div>
+                    <div class="container-login100-form-btn m-t-32">
+                        <button class="login100-form-btn" data-toggle="modal" data-target="#modalRegisterForm">
+                            Register Here
+                        </button>
+                    </div>
+              
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Customer Registration</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post" asp-controller="Customer" asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="CustomerFirstName" class="control-label">First Name</label>
+                            <input asp-for="CustomerFirstName" class="form-control" />
+                            <span asp-validation-for="CustomerFirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CustomerLastName" class="control-label">Last Name</label>
+                            <input asp-for="CustomerLastName" class="form-control" />
+                            <span asp-validation-for="CustomerLastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CustomerAddress" class="control-label"> Address</label>
+                            <input asp-for="CustomerAddress" class="form-control" />
+                            <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="State" class="control-label">State</label>
+                            <input asp-for="State" class="form-control" />
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Country" class="control-label">Country</label>
+                            <input asp-for="Country" class="form-control" />
+                            <span asp-validation-for="Country" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Zip" class="control-label">PIN Code</label>
+                            <input asp-for="Zip" class="form-control" />
+                            <span asp-validation-for="Zip" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CustomerContactNumber" class="control-label">Contact Number</label>
+                            <input asp-for="CustomerContactNumber" class="form-control" />
+                            <span asp-validation-for="CustomerContactNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CustomerEmailId" class="control-label">Email Id</label>
+                            <input asp-for="CustomerEmailId" class="form-control" />
+                            <span asp-validation-for="CustomerEmailId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CustomerPassword" class="control-label">Password</label>
+                            <input type="password" asp-for="CustomerPassword" class="form-control" />
+                            <span asp-validation-for="CustomerPassword" class="text-danger"></span>
+                        </div>
+
+
+
+                        <button class="btn btn-warning">Register</button>
+
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 

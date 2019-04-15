@@ -1,0 +1,121 @@
+﻿@model coreHotelRoomBookingUserPanel.Models.HotelRooms
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "HistoryDetails";
+    Layout = "~/Views/Shared/_Basic.cshtml";
+}
+
+
+<!-- Home -->
+
+<div class="home">
+    <div class="background_image"><img src="~/images/booking.jpg" /></div>
+    <div class="home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="home_content text-center">
+                        <div class="home_title">Booked Room Details</div>
+                        @*<div class="booking_form_container">
+                                <form action="#" class="booking_form" id="booking_form">
+                                    <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
+                                        <div class="booking_input_container d-flex flex-row align-items-start justify-content-start flex-wrap">
+                                            <div><input type="date" class=" booking_input booking_input_a booking_in" placeholder="Check in" name="checkIn" id="checkIn" value="@Context.Session.GetString("CheckIn")" required="required"></div>
+                                            <div><input type="date" class=" booking_input booking_input_a booking_out" placeholder="Check out" name="CheckOut" id="CheckOut" value="@Context.Session.GetString("CheckOut")" required="required"></div>
+                                            <div><input type="text" class="booking_input booking_input_b booking_in" placeholder="Hotel" name="Search" id="Search" value="@Context.Session.GetString("Search")" required="required"></div>
+                                            <div><input type="number" class="booking_input booking_input_b" placeholder="Guest" name="guest" id="guest" value="@Context.Session.GetString("Guest")" required="required"></div>
+                                        </div>
+                                        <div><button class="booking_button trans_200">Book Now</button></div>
+                                    </div>
+                                </form>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Booking -->
+
+<div class="booking">
+    <div class="container">
+
+    </div>
+</div>
+
+<div class="details">
+    <div class="container">
+        <div class="row">
+
+            @foreach (var item in ViewBag.HotelRoom)
+            {
+                <!-- Details Image -->
+                <div class="col-xl-7 col-lg-6">
+                    <div class="details_image">
+                        <div class="background_image"><img src="@item.RoomImage" class="bd-placeholder-img card-img-top" /></div>
+                    </div>
+                </div>
+
+                <!-- Details Content -->
+                <div class="col-xl-5 col-lg-6">
+                    <div class="details_content">
+                        <div class="details_title">@item.RoomType</div>
+
+                        <div class="details_long_list">
+                            <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+                                <li>Balcony</li>
+                                <li>Mountain view</li>
+                                <li>Terrace</li>
+                                <li>TV</li>
+                                <li>Satellite Channels</li>
+                                <li>Safety Deposit Box</li>
+                                <li>Heating</li>
+                                <li>Sofa</li>
+                                <li>Tile/Marble floor</li>
+                                <li>Mosquito net</li>
+                                <li>Wardrobe/Closet</li>
+                                <li>Sofa bed</li>
+                                <li>Shower</li>
+                                <li>Hairdryer</li>
+                                <li>Free toiletries</li>
+                                <li>Toilet</li>
+                                <li>Bath or Shower</li>
+                                <li>Toilet paper</li>
+                                <li>Tea/Coffee Maker</li>
+                                <li>Minibar</li>
+                                <li>Dining area</li>
+                                <li>Electric kettle</li>
+                                <li>Dining table</li>
+                                <li>Outdoor furniture</li>
+                                <li>Outdoor dining area</li>
+                                <li>Towels</li>
+                                <li>Linen</li>
+                                <li>Upper floors accessible by lift</li>
+                            </ul>
+                        </div>
+                        @*<div class="book_now_button"><a asp-controller="Booking" asp-action="Buy" asp-route-id="@item.RoomId" onclick="cartAlert()">Book Now</a></div>
+        <div class="book_now_button" style="margin-top:-55px; margin-left:170px"><a asp-controller="Home" asp-action="RoomsDetails" asp-route-id="@item.RoomId">View Details</a></div>*@
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+
+            }
+           
+            <div class="book_now_button" style="margin-left:15px; margin-top:60px;"><a asp-controller="Booking" asp-action="OrderHistory">Back to Order History</a></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
